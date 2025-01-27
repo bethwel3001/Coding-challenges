@@ -18,9 +18,14 @@ def find_first_non_repeating_char(s):
     # If all characters repeat, return None
     return None
         
+# Take input from the user
+user_input = input("Enter a string to find the first non-repeating character: ")
 
-# Test the function
-print(find_first_non_repeating_char("swiss"))  # Output: 'w'
-print(find_first_non_repeating_char("aabbcc"))  # Output: None
-print(find_first_non_repeating_char("programming"))  # Output: 'p'        
+# Call the function and display the result
+result = find_first_non_repeating_char(user_input)
+
+if result:
+    print(f"The first non-repeating character is: '{result}'")
+else:
+    print("There are no non-repeating characters in the string.")        
         
