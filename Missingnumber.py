@@ -13,5 +13,7 @@ def find_missing_number(nums):
     return total_sum - actual_sum
 
 # getting input from user
-nums = list(map(int, input("Enter the numbers: ").split()))
-print(find_missing_number(nums))  # Output: 2
+# Getting input from user, allowing comma separation
+nums = list(map(int, input("Enter the numbers (comma-separated): ").split(",")))
+
+print("The missing number is:", find_missing_number(nums))
