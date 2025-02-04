@@ -5,18 +5,21 @@
 def find_duplicates(numbers):
     # Create a dictionary to store the count of each number
     count_dict = {}
+    
     for num in numbers:
         if num in count_dict:
             count_dict[num] += 1
         else:
-count_dict[num] = 1
-# Create a list to store the duplicate numbers
-duplicate_list = []
-for num, count in count_dict.items():
-    if count > 1:
-        duplicate_list.append(num)
-        return duplicate_list
-    return []
+            count_dict[num] = 1  # Fix indentation
+
+    # Create a list to store the duplicate numbers
+    duplicate_list = []
+    
+    for num, count in count_dict.items():
+        if count > 1:
+            duplicate_list.append(num)  # Append all duplicates
+
+    return duplicate_list  # Return outside the loop, after checking all numbers
 
 # Ask the user for inputs
 numbers = input("Please enter a list of numbers separated by spaces: ")
@@ -24,7 +27,13 @@ numbers = [int(x) for x in numbers.split()]
 
 # Find the duplicate numbers
 duplicate_numbers = find_duplicates(numbers)
-print("The duplicate numbers are: ", duplicate_numbers)
+
+# Display result
+if duplicate_numbers:
+    print("The duplicate numbers are:", duplicate_numbers)
+else:
+    print("No duplicate numbers found.")
+
 
 # Example output:
 # Please enter a list of numbers separated by spaces: 1 2 2 3
