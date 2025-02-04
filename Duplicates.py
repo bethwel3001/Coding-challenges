@@ -1,0 +1,31 @@
+# Write a function that takes a list of numbers and returns a list of all duplicate numbers (numbers that appear more than once). The output should not have duplicates itself.
+
+# Should ask the user for inputs
+# Should return a list of duplicate numbers
+def find_duplicates(numbers):
+    # Create a dictionary to store the count of each number
+    count_dict = {}
+    for num in numbers:
+        if num in count_dict:
+            count_dict[num] += 1
+        else:
+count_dict[num] = 1
+# Create a list to store the duplicate numbers
+duplicate_list = []
+for num, count in count_dict.items():
+    if count > 1:
+        duplicate_list.append(num)
+        return duplicate_list
+    return []
+
+# Ask the user for inputs
+numbers = input("Please enter a list of numbers separated by spaces: ")
+numbers = [int(x) for x in numbers.split()]
+
+# Find the duplicate numbers
+duplicate_numbers = find_duplicates(numbers)
+print("The duplicate numbers are: ", duplicate_numbers)
+
+# Example output:
+# Please enter a list of numbers separated by spaces: 1 2 2 3
+# The duplicate numbers are:  [2]
