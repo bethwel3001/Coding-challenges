@@ -22,7 +22,7 @@ def find_duplicates(numbers):
     return duplicate_list  # Return outside the loop, after checking all numbers
 
 # Ask the user for inputs
-numbers = input("Please enter a list of numbers separated by spaces: ")
+numbers = input("Enter a list of numbers in the format '1 2 3': ")
 numbers = [int(x) for x in numbers.split()]
 
 # Find the duplicate numbers
@@ -32,7 +32,7 @@ duplicate_numbers = find_duplicates(numbers)
 if duplicate_numbers:
     print("The duplicate numbers are:", duplicate_numbers)
 else:
-    print("No duplicate numbers found.")
+    print("No duplicates❌ .")
 
 
 # Example output:
