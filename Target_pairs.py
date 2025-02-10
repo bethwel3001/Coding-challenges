@@ -14,11 +14,11 @@ def find_pairs(numbers, target):
     
     return pairs
 # Test the function
-numbers = [1, 2, 3, 4, 5]
-target = 7
-print(find_pairs(numbers, target))  # Output: [(2, 5), (3,
-# Test the function with a list of duplicate numbers
-numbers = [1, 2, 2, 3, 4, 5]
-target = 7
+# Get user input
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+target = int(input("Enter target sum: "))
 
-print(find_pairs(numbers, target))  # Output: [(2, 5), (2, 5), (3, 4)]
+# Call the function
+print("Pairs that sum to", target, ":", find_pairs(numbers, target))
+
+# working 💯
