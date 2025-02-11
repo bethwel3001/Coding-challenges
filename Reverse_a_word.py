@@ -1,7 +1,5 @@
 # Write a function that takes a sentence and returns it with each word reversed, but the word order stays the same.
-# For example, given the sentence "Hello world", the function should return "olleH dlrow
 # should take an input from the user
-# should return the reversed sentence
 def reverse_words(sentence):
     # Split the sentence into words
     words = sentence.split()
@@ -26,6 +24,4 @@ def reverse_words(sentence):
 sentence = input("Please enter a sentence: ")
 
 reversed_sentence = reverse_words(sentence)
-print("The reversed sentence is: ", reversed_sentence)  # Output: The reversed sentence is:
-
-# olleH dlrow
+print("The reversed sentence is: ", reversed_sentence)  
