@@ -1,22 +1,29 @@
 
 #  Write a Python function to find the second largest number in a list of integers.
 
-def second_largest(numbers):
-    # Sort the list in descending order
-    numbers.sort(reverse=True)
-    
-    # If the list has less than two distinct elements, return None
-    if len(set(numbers)) < 2:
+# should take the list from a user as input
+# should return the second largest number in the list
+def second_largest(nums):
+    # Check if the list has less than 2 elements
+    if len(nums) < 2:
         return None
-    
-    # Return the second largest number
-    return numbers[1]
+    # Remove duplicates by converting the list to a set
+    unique_nums = set(nums)
+    # Convert the set back to a list and find the largest number
+    largest = max(unique_nums)
+    # Remove the largest number from the list
+    unique_nums.remove(largest)
+    # Find the second largest number
+    second_largest = max(unique_nums)
+    return second_largest
 
-# Test the function
-print(second_largest([4, 2, 9, 6, 5,
-                      1, 8, 3, 7]))  # Output: 8
+# Get user input
+nums = input("Enter a list of numbers separated by space: ").split()
+nums = [int(num) for num in nums]
+# Call the function and print the result starting with, the seconsd largest num is:
 
-#  Write a Python function to find the second largest number in a list of integers.
+print("The second largest number in the list is:", second_largest(nums))
+
 
 
 
